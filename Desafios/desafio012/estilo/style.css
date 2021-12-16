@@ -1,4 +1,67 @@
 @charset "UTF-8";
 
-body {
+
+* {
+    padding: 0px; /* tirar os espaços de cima */
+    margin: 0px; /* para tirar dos lados */
+    
+}
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+}
+
+header > p {
+    padding-bottom: 50px;
+}
+
+a { /* Para conf. todos os links, para configurar links específicos ( header a, footer a {} */ 
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: cadetblue;
+    color: white;
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.358);
+    width: 400px;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-align: center;
 }
