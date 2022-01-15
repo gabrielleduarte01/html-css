@@ -11,8 +11,9 @@
         }
 
         table {
-            width: 400px;
+            width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td,th {
@@ -20,20 +21,39 @@
             padding: 8px;
         }
 
-        td.num {
-            text-align: right;
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
         }
 
         thead, tfoot {
             background-color: grey;
             color: white;
         }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgrey;
+        }
+
+        td.num {
+            text-align: right;
+        }
+        
     </style>
 </head>
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!-- Anatomia de tabelas grandes
     Table
+    caption = legenda
         Thead
             tr, td, th
         Tbody
@@ -41,10 +61,11 @@
         Tfoot 
             tr, td, th -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -68,10 +89,70 @@
                 <td>Paraná</td>
                 <td class="num">12 444 000</td>
             </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 999</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">18 994 993</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 566 599</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">12 444 000</td>
+            </tr>   
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 999</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">18 994 993</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 566 599</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">12 444 000</td>
+            </tr> 
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 999</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">18 994 993</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 566 599</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">12 444 000</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>111 111 111</strong></td>
             </tr>
         </tfoot>
